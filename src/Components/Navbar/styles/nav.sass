@@ -1,0 +1,177 @@
+.topNav
+    width: 100%
+    position: fixed
+    top: 0%
+.navbar
+    position: fixed
+    top: 0%
+    width: 100%
+    color: white
+    min-height: 5vh
+    z-index: 2
+    display: flex
+    flex-direction: column
+    align-items: center
+    line-height: 10px
+    justify-content: center
+    align-items: center
+    font-size: 28px
+    .topNav
+        padding-bottom: 20px
+        transition: 0.3s ease
+        .links
+    .mostBlack
+        background-color: #4a4e69
+    div 
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row
+        div
+            padding-top: 5px
+            z-index: 3
+            flex-basis: auto
+    .icon
+        font-size: 55px
+        margin-right: 10%
+        display: flex
+        justify-content: center
+        align-items: center
+    .links
+        margin-bottom: 0px
+        padding-bottom: 0px
+        .navbar_links
+            margin-bottom: 10px
+            display: flex
+            justify-content: center
+            align-items: center
+            list-style-type: none
+            margin: 10px
+            margin-bottom: 0px
+            padding-bottom: 0px
+            .nav_item
+                cursor: pointer
+                margin: 10px
+                font: 600 14px/30px Montserrat,sans-serif
+                margin-bottom: 0px
+                padding-bottom: 0px
+    .blog   
+        margin-left: 10%
+        display: flex
+        justify-content: center
+        align-items: center
+        button
+            background-color: white
+            color: #4a4e69
+            cursor: pointer
+            padding: 5px 15px
+            font-size: 20px
+            border-radius: 5px
+            border: 1px solid white
+    .mobile_navbar 
+        font: 600 14px/30px Montserrat,sans-serif
+        width: 100%
+        margin: 0px
+        padding 0px
+        transition: 0.5s ease
+        ul
+            display: flex
+            height: 100vh
+            flex-direction: column
+            list-style-type: none
+            justify-content: center
+            align-items: flex-start
+            z-index: 2
+            color: white
+            background-color: #4a4e69
+            transition: 0.3s ease
+            width: 100%
+            margin: 0px
+            padding-left: 0px
+            li
+                cursor: pointer
+                padding-left: 20px
+                padding-top: 20px
+                padding-bottom: 20px
+.bars
+    color: white
+.hamburgers
+    position: fixed!important
+    width: 100vw
+    background-color: #4a4e69
+    z-index: 999
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    div
+        margin-right: 5%
+        z-index: 999
+        color: white
+.fa-icon
+    position: fixed
+    color: white
+    transition: 0.3s ease
+.rotateIc
+    transform: rotate(90deg)
+@media (max-width: 1000px)
+    .navbar    
+        div
+            .icon
+                margin-right: 1px
+            .blog
+                margin-left: 1px
+@media (min-width: 700px)
+    .hamburgers
+        display: none!important
+    .mobile_navbar
+        transform: translateY(-200%)
+    .navbar
+        max-height: 20vh
+@media (max-width: 700px)
+    .topNav
+        background-color: #4a4e69
+        opacity: 1
+        color: black
+        margin-bottom: 0px
+        padding-bottom: 0px!important
+    .mobile_navbar_ul
+        transform: translateY(-200%)
+        font-size: 20px
+    .mobile_navbar
+        transform: translateY(-200%)
+    .navbar
+        width: 100%
+        transition: 0.5s ease
+        transform: translateY(-200vh)
+        .topNav
+            width: 100%
+
+    .links
+        display: none!important
+    .blog
+        display: none
+        button 
+            display: none
+    .icon
+        text-align: left
+        flex-basis: 50%
+        .first
+            justify-content: flex-start
+        div
+            display: flex
+            justify-content: flex-end
+    .hamburger:hover
+        cursor: pointer
+        .navbar
+            .mobile_navbar
+                transition: 0.5s ease
+                text-align: left
+                display: flex
+    .navUnHide
+        display: flex!important
+        width: 100%
+        transform: translateY(0%)
+        .mobile_navbar_ul
+            transform: translateY(0%)
+    .navbarUnHide
+        transform: translateY(0vh)
