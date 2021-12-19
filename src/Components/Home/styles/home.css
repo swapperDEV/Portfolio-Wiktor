@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+.wrapper_image {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-position: 25% 75%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 60px;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.wrapper_image p {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.wrapper_image .name {
+  font-size: 70px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper_image .job {
+  font-family: 'Poppins', sans-serif;
+  font-size: 35px;
+}
+
+.wrapper_image .social_icons {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper_image .social_icons i {
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 25px;
+}
+
+.wrapper_image .social_icons i:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+.wrapper_image .welcome {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 1000px) {
+  .wrapper_image {
+    background-position: 0% 100%;
+  }
+  .wrapper_image .name {
+    font-size: 50px;
+  }
+  .wrapper_image .job {
+    font-size: 30px;
+  }
+  .wrapper_image .social_icons {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper_image .name {
+    font-size: 30px;
+  }
+  .wrapper_image .job {
+    font-size: 25px;
+  }
+}
+/*# sourceMappingURL=home.css.map */

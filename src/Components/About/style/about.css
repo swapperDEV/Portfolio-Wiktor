@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+.about_section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 30vh;
+  color: #797979;
+  padding-top: 0px;
+}
+
+.about_section .about__left, .about_section .about__right {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  padding-top: 0px;
+}
+
+.about_section .about__right img {
+  width: 125%;
+  height: 125%;
+}
+
+.about_section .about__left {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.about_section .about__left .about__one {
+  color: #040c2c;
+  font-family: 'Work Sans', sans-serif;
+  padding: 0px;
+  font-size: 40px;
+  margin: 0px;
+}
+
+.about_section .about__left .about__two {
+  font-size: 15px;
+  color: #acacac;
+  font-family: Montserrat,sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+
+.about_section .about__left .icons i {
+  padding-left: 10px;
+}
+
+.about_section .about__left .about__buttons {
+  font-family: Montserrat,sans-serif;
+}
+
+.about_section .about__left .about__buttons button {
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.about_section .about__left .about__buttons .btn_one {
+  background-color: #040c2c;
+  border: 1px solid #040c2c;
+  border-radius: 3px;
+  padding: 5px;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: 30px;
+}
+
+.about_section .about__left .about__buttons .btn_two {
+  background-color: white;
+  color: #040c2c;
+  border: 1px solid #040c2c;
+  border-radius: 3px;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.about_section .about__left .about__buttons .btn_one:hover {
+  background-color: white;
+  color: #040c2c;
+}
+
+.about_section .about__left .about__buttons .btn_two:hover {
+  background-color: #040c2c;
+  color: white;
+}
+/*# sourceMappingURL=about.css.map */
