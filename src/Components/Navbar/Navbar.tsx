@@ -9,7 +9,7 @@ const Navbar = (props:any) => {
     const handleScroll = () => {
         const position = window.pageYOffset;
         const height = window.innerHeight
-        //console.log(height, position);
+        console.log(height, position, scrollPosition);
         if(position > 1) {
             changeClasses('topNav mostBlack')
         } else {
