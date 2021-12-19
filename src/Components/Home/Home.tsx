@@ -15,10 +15,10 @@ const Home = forwardRef((props:any, ref:any) => {
                 <p className='name' data-aos='fade-up'>I am Wiktor Maciążek.</p>
                 <p className='job' data-aos='fade-up'>Back-end & Front-end</p>
                 <div className='social_icons' data-aos='fade-up'>
-                    <a><i className="fab fa-facebook-f"></i></a>
-                    <a><i className="fab fa-instagram"></i></a>
+                    <a href='https://github.com/swapperDEV/' target='blank'><i className="fab fa-facebook-f"></i></a>
+                    <a href='https://github.com/swapperDEV/' target='blank'><i className="fab fa-instagram"></i></a>
                     <a href='https://github.com/swapperDEV/' target='blank'><i className="fab fa-github"></i></a>
-                    <a><i className="fab fa-youtube"></i></a>
+                    <a href='https://github.com/swapperDEV/' target='blank'><i className="fab fa-youtube"></i></a>
                 </div>
             </Background>
         </div>
