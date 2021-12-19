@@ -1,5 +1,4 @@
 import React, {forwardRef, useEffect} from 'react'
-import Wrapper from '../../UI/Wrapper'
 import './style/about.css'
 import memoji from '../../Assets/memoji.jpg'
 import Aos from "aos"
