@@ -5,6 +5,7 @@ import RouterComponent from './Routes';
 const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [which, setWhich] = useState('')
+  console.log(scrollPosition, which)
   const handleScroll = () => {
       const position = window.pageYOffset;
       if(position > 100) {
