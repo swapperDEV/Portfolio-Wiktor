@@ -5,7 +5,6 @@ import Navbar from '../Components/Navbar/Navbar'
 import Home from '../Components/Home/Home'
 import BlogPost from '../Components/BlogPost/BlogPost'
 import Skills from '../Components/Skills/Skills'
-import SectionLine from '../UI/SectionLine'
 const Portfolio = () => {
     const [offset, setOffset] = useState(0);
     const [offsetPoint, offsetPointer] = useState(0)
