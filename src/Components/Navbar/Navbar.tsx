@@ -3,19 +3,27 @@ import './styles/nav.css'
 import Wrapper from '../../UI/Wrapper'
 import { Spin as Hamburger } from 'hamburger-react'
 const Navbar = (props:any) => {
+    //ANIMACJA PRZY HOVERZE
     const [scrollPosition, setScrollPosition] = useState(0);
     const [navClasses, changeClasses] = useState('topNav')
     const [navDisplay, changeNavDisplay] = useState(false)
+    const [navActScrollElement, changeActScrollElement] = useState('home')
     const handleScroll = () => {
         const position = window.pageYOffset;
-        const height = window.innerHeight
-        console.log(height, position, scrollPosition);
+        //console.log(height, position);
         if(position > 1) {
             changeClasses('topNav mostBlack')
         } else {
             changeClasses('topNav')
         }
         setScrollPosition(position);
+        if(position > props.projects.current.offsetTop - 10) {
+            changeActScrollElement('projects')
+        } else if(position > props.about.current.offsetTop - 10) {
+            changeActScrollElement('about')
+        } else if(position > props.home.current.offsetTop - 100) {
+            changeActScrollElement('home')
+        }
     };
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -34,47 +42,53 @@ const Navbar = (props:any) => {
                 props.homeScroll()
                 changeNavDisplay(true)
                 break;
-            case 'skills':
-                props.skillsScroll()
+            case 'projects':
+                props.projectsScroll()
                 changeNavDisplay(false)
                 break;  
         }
     }
     const sections = [
         {name: 'HOME',
-        icons: <i className="fas fa-home"></i>,
+        icons: <i className={`fas fa-home`}></i>,
         onClk: () => scrollToA('home'),
+        class: navActScrollElement === 'home' && 'ActiveS'
         },        
         {name: 'ABOUT',
-        icons: <i className="far fa-address-card"></i>,
+        icons: <i className={`far fa-address-card`}></i>,
         onClk: () => scrollToA('about'),
-        },        
-        {name: 'SKILLS',
-        icons: <i className="fas fa-bookmark"></i>,
-        onClk: () => scrollToA('skills'),
+        class: navActScrollElement === 'about' && 'ActiveS'
         },        
         {name: 'PROJECTS',
+        icons: <i className={`fas fa-bookmark`}></i>,
+        onClk: () => scrollToA('projects'),
+        class: navActScrollElement === 'projects' && 'ActiveS'
+        },        
+        {name: 'BLOG',
         icons: <i className="fas fa-tasks"></i>,
         onClk: () => scrollToA('about'),
+        class: ''
         },        
         {name: 'OPINIONS',
         icons: <i className="fas fa-users"></i>,
         onClk: () => scrollToA('about'),
+        class: ''
         },        
         {name: 'CONTACT',
         icons: <i className="fas fa-phone"></i>,
         onClk: () => scrollToA('about'),
+        class: ''
         },
         ]
     const links = sections.map((e) => (
         //@ts-ignore
-        <li key={e.name} className='nav_item' onClick={e.onClk}>
+        <li key={e.name} className={`nav_item ${e.class}`} onClick={e.onClk}>
             {e.name}
         </li>
     )) 
     const linksFull = sections.map((e) => (
         //@ts-ignore
-        <li key={e.name} className='nav_item' onClick={() => scrollToA()}>
+        <li key={e.name} className={`nav_item mobile_nav_item ${e.class}`} onClick={e.onClk}>
             {e.name} {e.icons}
         </li>
     )) 

@@ -1,0 +1,115 @@
+.skills_section
+    background-color: #fafafa
+    padding: 100px
+    .skills_text
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .skills_section_title
+            text-align: center
+            font-size: 50px
+            color: #040c2c
+            padding: 0px
+            margin: 0px
+        .skills_section_description
+            color: #8a8a8a
+            padding-top: 0px
+            margin-top: 0px
+        hr
+            width: 8%
+    .skills_list
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row
+        flex-wrap: wrap
+        list-style-type: none
+        width: 100%
+        padding-left: 0px
+        .skill_icon
+            font-size: 40px
+            margin-left: 15px
+            margin-right: 15px
+            padding: 10px
+            cursor: pointer
+            transition: 0.1s ease
+            border-radius: 15px
+            border: 1px solid transparent
+        .skill_icon:hover
+            background-color: lightgray
+            border: 1px solid lightgray
+        .choosed
+            background-color: lightgray
+            border: 1px solid lightgray
+            border-radius: 15px
+        .choosed:hover
+            background-color: transparent
+    .projects_list
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        text-align: center
+        div
+            flex-basis: 28%
+        .project_block
+            font-family: Open Sans,sans-serif
+            color: #797979
+            background-color: #fff
+            margin: 10px
+            display: flex
+            width: 80%
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            height: 350px
+            border: 1px solid #f3f1f1
+            border-radius: 15px
+            margin-top: 40px!important
+            .project_name
+                color: #040c2c
+                font-size: 20px
+                margin-bottom: 2px
+            img
+                padding: 10px
+                width: 90%
+                border: 1px solid white
+                border-radius: 15px
+            .tech
+                display: flex
+                p
+                    margin-left: 10px
+                    margin-right: 10px
+//#4a4e69
+    //#040c2c
+        //#f3f1f1
+            //#fff
+                //#8a8a8a
+
+@media (max-width: 900px)
+    .skills_section
+        padding-left: 10px
+        padding-right: 10px
+        .skills_technology
+            width: 100%
+        .skills_list
+            .skill_icon
+                font-size: 35px
+                margin-left: 5px
+                margin-right: 5px
+                padding: 8px
+                margin-top: 10px
+        .projects_list
+            div
+                display: flex
+                justify-content: center
+                algin-items: center
+                margin: 0px
+                padding: 0px
+                flex-basis: 100%
+                .project_block
+                    width: 100%
+                    height: 250px

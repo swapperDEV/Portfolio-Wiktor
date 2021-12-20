@@ -1,0 +1,195 @@
+.skills_section {
+  background-color: #fafafa;
+  padding: 100px;
+}
+
+.skills_section .skills_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills_section .skills_text .skills_section_title {
+  text-align: center;
+  font-size: 50px;
+  color: #040c2c;
+  padding: 0px;
+  margin: 0px;
+}
+
+.skills_section .skills_text .skills_section_description {
+  color: #8a8a8a;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.skills_section .skills_text hr {
+  width: 8%;
+}
+
+.skills_section .skills_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 0px;
+}
+
+.skills_section .skills_list .skill_icon {
+  font-size: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  border-radius: 15px;
+  border: 1px solid transparent;
+}
+
+.skills_section .skills_list .skill_icon:hover {
+  background-color: lightgray;
+  border: 1px solid lightgray;
+}
+
+.skills_section .skills_list .choosed {
+  background-color: lightgray;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+}
+
+.skills_section .skills_list .choosed:hover {
+  background-color: transparent;
+}
+
+.skills_section .projects_list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.skills_section .projects_list div {
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
+}
+
+.skills_section .projects_list .project_block {
+  font-family: Open Sans,sans-serif;
+  color: #797979;
+  background-color: #fff;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 350px;
+  border: 1px solid #f3f1f1;
+  border-radius: 15px;
+  margin-top: 40px !important;
+}
+
+.skills_section .projects_list .project_block .project_name {
+  color: #040c2c;
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.skills_section .projects_list .project_block img {
+  padding: 10px;
+  width: 90%;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.skills_section .projects_list .project_block .tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skills_section .projects_list .project_block .tech p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .skills_section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .skills_section .skills_technology {
+    width: 100%;
+  }
+  .skills_section .skills_list .skill_icon {
+    font-size: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 8px;
+    margin-top: 10px;
+  }
+  .skills_section .projects_list div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    algin-items: center;
+    margin: 0px;
+    padding: 0px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .skills_section .projects_list div .project_block {
+    width: 100%;
+    height: 250px;
+  }
+}
+/*# sourceMappingURL=projects.css.map */

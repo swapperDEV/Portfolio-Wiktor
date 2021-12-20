@@ -4,14 +4,17 @@ import About from '../Components/About/About'
 import Navbar from '../Components/Navbar/Navbar'
 import Home from '../Components/Home/Home'
 import BlogPost from '../Components/BlogPost/BlogPost'
-import Skills from '../Components/Skills/Skills'
+import Projects from '../Components/Projects/Projects'
+import {isMobile} from 'react-device-detect';
+
 const Portfolio = () => {
     const [offset, setOffset] = useState(0);
     const [offsetPoint, offsetPointer] = useState(0)
     const [canScrolled, changeCanScrolled] = useState(true)
     const about = useRef()
     const home = useRef()
-    const skills = useRef()
+    const projects = useRef()
+    //@ts-ignore
     const aboutScroll = () => {
         //@ts-ignore
         about.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -20,10 +23,10 @@ const Portfolio = () => {
         //@ts-ignore
         home.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     } 
-    const skillsScroll = () => {
+    const projectsScroll = () => {
         changeCanScrolled(false)
         //@ts-ignore
-        skills.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        projects.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
         setTimeout(() => {
             changeCanScrolled(true)
         }, 1000)
@@ -39,24 +42,29 @@ const Portfolio = () => {
             console.log(offset, window.innerHeight);
             if(offset < window.innerHeight && offset < window.innerHeight - window.innerHeight / 3) {
                 if(canScrolled) {
-                    aboutScroll()
+                    if(!isMobile) {
+                        aboutScroll()
+                    }
                 }
             }
         } else {
             if(offset < window.innerHeight) {
                 if(canScrolled) {
-                    homeScroll()
+                    if(!isMobile) {
+                        homeScroll()
+                    }
                 }            
         }}
+        //@ts-ignore
         offsetPointer(offset)
     }, [offset])
     
     return (
         <Wrapper className='body_wrapper'>
-            <Navbar aboutScroll={aboutScroll} homeScroll={homeScroll} skillsScroll={skillsScroll}/>
-            <Home ref={home}/>
+            <Navbar aboutScroll={aboutScroll} homeScroll={homeScroll} projectsScroll={projectsScroll} home={home} about={about} projects={projects}/>
+            <Home ref={home} aboutScroll={aboutScroll}/>
             <About ref={about}/>
-            <Skills ref={skills}/>
+            <Projects ref={projects}/>
             <BlogPost/>
         </Wrapper>
     )

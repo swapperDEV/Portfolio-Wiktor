@@ -15,6 +15,16 @@
     overflow: hidden
     filter: none
     transform-style: preserve-3d
+    .animation_bg
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 700px
+        height: 200px
+        transform: translate(-50%,-50%)
+        #tsparticles
+            border: 5px solid transparent
+            border-radius: 50px
     p
         padding: 0px
         margin: 0px
@@ -47,6 +57,21 @@
         font-size: 30px
         margin-bottom: 20px
         font-family: 'Raleway', sans-serif
+    .home_scroll_down
+        bottom: 5%
+        position: absolute
+        left: 50%
+        transform: translateX(-50%, 0%)
+        animation: fadeing 1s ease infinite 
+
+@keyframes fadeing 
+    0%
+        transform: translate(-70%, 0%)
+    50%
+        transform: translate(-70%, 10%)
+    100%
+        transform: translate(-70%, 0%)
+
 
 @media (max-width: 1000px)
     .wrapper_image

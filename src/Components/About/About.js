@@ -1,4 +1,5 @@
 import React, {forwardRef, useEffect} from 'react'
+import Wrapper from '../../UI/Wrapper'
 import './style/about.css'
 import memoji from '../../Assets/memoji.jpg'
 import Aos from "aos"
@@ -16,19 +17,26 @@ const About = forwardRef((props, ref) => {
         </svg>
         <div className='about_section' >
             <div className='about__left' data-aos='fade-right'>
-                <p className='about__one' data-aos='flip-up'>
-                    About me
-                </p>
-                <p className='about__two'>Frontend & Backend Developer</p>
-                <div className='icons'>
-                    <i className="far fa-keyboard"></i>
-                    <i className="fas fa-camera"></i>
-                    <i className="far fa-lightbulb"></i>
+                <div className='about__left_top'>
+                    <div className='about__left_info'>                
+                        <p className='about__one' data-aos='flip-up'>
+                            About me
+                        </p>
+                        <p className='about__two'>Frontend & Backend Developer</p>
+                        <div className='icons'>
+                            <i className="far fa-keyboard"></i>
+                            <i className="fas fa-camera"></i>
+                            <i className="far fa-lightbulb"></i>
+                        </div>
+                    </div>
+                    <div className='about__right_info'>
+                        <img src={memoji} alt='myphoto' data-aos='flip-up'/>
+                    </div>
                 </div>
                 <p data-aos='fade-up'>Hi, i'm Wiktor, i Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati itaque earum vitae reprehenderit nesciunt sint enim quidem saepe asperiores quisquam ab incidunt culpa maiores cupiditate, rerum, tempora officia debitis. Nobis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque saepe laboriosam vero, dolor illum at enim, sed repellendus quo inventore, facere voluptates laborum dolores incidunt!</p>
                 <div className='about__buttons'>
-                    <button className='btn_one'>Contact</button>
-                    <button className='btn_two'>Read more</button>
+                    <button className='btn_one' data-aos='fade-up'>Contact</button>
+                    <button className='btn_two' data-aos='fade-up'>Read more</button>
                 </div>
             </div>
             <div className='about__right' data-aos='fade-left'>
