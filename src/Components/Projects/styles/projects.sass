@@ -46,36 +46,32 @@
         .choosed:hover
             background-color: transparent
     .projects_list
-        width: 100%
         display: flex
         flex-direction: row
-        flex-wrap: wrap
         justify-content: center
         align-items: center
+        flex-wrap: wrap
         text-align: center
-        div
-            flex-basis: 28%
         .project_block
             font-family: Open Sans,sans-serif
             color: #797979
             background-color: #fff
             margin: 10px
-            display: flex
-            width: 80%
-            justify-content: center
-            align-items: center
             flex-direction: column
-            height: 350px
             border: 1px solid #f3f1f1
             border-radius: 15px
             margin-top: 40px!important
+            display: flex
+            justify-content: center
+            align-items: center
             .project_name
                 color: #040c2c
                 font-size: 20px
                 margin-bottom: 2px
             img
                 padding: 10px
-                width: 90%
+                width: 300px
+                height: 150px
                 border: 1px solid white
                 border-radius: 15px
             .tech
@@ -83,6 +79,30 @@
                 p
                     margin-left: 10px
                     margin-right: 10px
+            .project_btn
+                margin-bottom: 10px
+                button
+                    background-color: white
+                    color: #777777
+                    cursor: pointer
+                    border: 1px solid #ededed
+                    transition: 0.1s ease
+                    font-weight: 200
+                    font-size: 13px
+                    font-family: Montserrat,sans-serif
+                    border-radius: 5px
+                    margin: 10px
+                    padding: 5px
+                    padding-left: 10px
+                    padding-right: 10px
+                    a 
+                        color: #777777
+                        font-size: 13px
+                button:hover
+                    background-color: #040c2c
+                    color: #fff
+                    a
+                        color: #fff
 //#4a4e69
     //#040c2c
         //#f3f1f1
@@ -102,14 +122,3 @@
                 margin-right: 5px
                 padding: 8px
                 margin-top: 10px
-        .projects_list
-            div
-                display: flex
-                justify-content: center
-                algin-items: center
-                margin: 0px
-                padding: 0px
-                flex-basis: 100%
-                .project_block
-                    width: 100%
-                    height: 250px

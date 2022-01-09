@@ -3,9 +3,12 @@ import Wrapper from '../UI/Wrapper'
 import About from '../Components/About/About'
 import Navbar from '../Components/Navbar/Navbar'
 import Home from '../Components/Home/Home'
-import BlogPost from '../Components/BlogPost/BlogPost'
+import Blog from '../Components/Blog/Blog'
 import Projects from '../Components/Projects/Projects'
 import {isMobile} from 'react-device-detect';
+import Footer from '../Components/Footer/Footer'
+import Opinions from '../Components/Opinions/Opinions'
+import Contact from '../Components/Contact/Contact'
 
 const Portfolio = () => {
     const [offset, setOffset] = useState(0);
@@ -14,6 +17,9 @@ const Portfolio = () => {
     const about = useRef()
     const home = useRef()
     const projects = useRef()
+    const blog = useRef()
+    const contact = useRef()
+    const opinions = useRef()
     //@ts-ignore
     const aboutScroll = () => {
         //@ts-ignore
@@ -27,6 +33,30 @@ const Portfolio = () => {
         changeCanScrolled(false)
         //@ts-ignore
         projects.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        setTimeout(() => {
+            changeCanScrolled(true)
+        }, 1000)
+    } 
+    const blogScroll = () => {
+        changeCanScrolled(false)
+        //@ts-ignore
+        blog.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        setTimeout(() => {
+            changeCanScrolled(true)
+        }, 1000)
+    } 
+    const opinionsScroll = () => {
+        changeCanScrolled(false)
+        //@ts-ignore
+        opinions.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        setTimeout(() => {
+            changeCanScrolled(true)
+        }, 1000)
+    } 
+    const contactScroll = () => {
+        changeCanScrolled(false)
+        //@ts-ignore
+        contact.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
         setTimeout(() => {
             changeCanScrolled(true)
         }, 1000)
@@ -61,11 +91,14 @@ const Portfolio = () => {
     
     return (
         <Wrapper className='body_wrapper'>
-            <Navbar aboutScroll={aboutScroll} homeScroll={homeScroll} projectsScroll={projectsScroll} home={home} about={about} projects={projects}/>
+            <Navbar aboutScroll={aboutScroll} homeScroll={homeScroll} projectsScroll={projectsScroll} home={home} about={about} projects={projects} blogScroll={blogScroll} blog={blog} opinions={opinions} contact={contact} opinionsScroll={opinionsScroll} contactScroll={contactScroll}/>
             <Home ref={home} aboutScroll={aboutScroll}/>
             <About ref={about}/>
             <Projects ref={projects}/>
-            <BlogPost/>
+            <Opinions ref={opinions}/>
+            <Blog ref={blog}/>
+            <Contact ref={contact}/>
+            <Footer/>
         </Wrapper>
     )
 }
