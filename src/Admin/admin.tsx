@@ -8,11 +8,16 @@ import AdminMenu from './components/adminMenu'
 
 const Admin = () => {
     const [ifLogged, changeLogged] = useState(false)
-    const logged = () => {
+    const [actKey, setKey] = useState('error')
+    const logged = (key:string) => {
+        console.log(key);
         changeLogged(true)
+        setKey(key)
     }
     const logout = () => {
         changeLogged(false)
+        setKey('error')
+        localStorage.setItem('logTime', '0')
     }    
     return (
         <Wrapper className='adminPage'>

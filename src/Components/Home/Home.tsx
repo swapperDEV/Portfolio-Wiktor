@@ -3,20 +3,22 @@ import Background from '../../UI/Background'
 import './styles/home.css'
 import Aos from "aos"
 import "aos/dist/aos.css"
-import { MobileView } from 'react-device-detect';
+import { MobileView, BrowserView } from 'react-device-detect';
 import Particles from 'react-tsparticles';
-import { particlesOptions } from '../../Particles/home_side_options.js'
+import { particlesOptions } from '../../Data/Particles/home_side_options.js'
 
 const Home = forwardRef((props:any, ref:any) => {
     useEffect(() => {
         Aos.init({ duration: 1000 })
     },[])
     return (
-        <div className='home_wrapper' ref={ref}>
+        <section className='home_wrapper' ref={ref}>
             <Background className='home'>
-                <div className='animation_bg'>
-                    <Particles id="tsparticles" options={particlesOptions}/>
-                </div>
+                <BrowserView>
+                    <div className='animation_bg'>
+                            <Particles id="tsparticles" options={particlesOptions}/>
+                        </div>
+                </BrowserView>
                 <p className='welcome' data-aos='fade-up'>HELLO 👋</p>
                 <p className='name' data-aos='fade-up'>I am Wiktor Maciążek.</p>
                 <p className='job' data-aos='fade-up'>Back-end & Front-end</p>
@@ -32,7 +34,7 @@ const Home = forwardRef((props:any, ref:any) => {
                     </div>
                 </MobileView>
             </Background>
-        </div>
+        </section>
     )
 })
 

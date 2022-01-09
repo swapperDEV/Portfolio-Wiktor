@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed:ital,wght@1,700&display=swap')
+.admin_panel
+    width: 100vw
+    font-family: 'Roboto Condensed', sans-serif
+    height: 100vh
+    background-color: #fff
+    overflow: hidden
+    color: white
+    display: flex
+    .admin_sidebar
+        flex-basis: 10%
+        font-size: 20px
+        display: flex
+        align-items: center
+        flex-direction: column
+        padding: 10px
+        flex-grow: 1
+        background-color: #040c2c
+        .admin_menu
+            ul
+                padding-left: 0px
+                list-style-type: none
+                display: flex
+                justify-content: center
+                flex-direction: column
+                align-items: flex-start
+                margin-top: 30px
+                margin-bottom: 30px
+            li
+                margin: 5px
+                transition: 0.1s ease
+                padding-bottom: 2px
+                border-bottom: 1px solid transparent
+            li:hover
+                cursor: pointer
+                border-bottom: 1px solid white
+        div
+            display: flex
+            justify-content: center
+            align-items: center
+            i
+                margin-right: 5px
+        button
+            color: white
+            cursor: pointer
+            transition: 0.1s ease
+            margin-top: 10px
+            background-color: transparent
+            border: 1px solid white
+            border-radius: 5px
+        button:hover
+            transform: scale(1.1)
+    .admin_viewPanel
+        flex-basis: 90%
+        flex-shrink: 1
+        background-color: white
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        color: lightgray
+        opacity: .9
+        .postCreate
+            opacity: 1
+            color: #000
+            font-family: 'Lato', sans-serif
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            label
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                align-items: center
+                text-align: left
+                margin-top: 5px
+                align-self: flex-start
+                input
+                    margin-left: 5px
+            p
+                font-size: 20px
+            textarea
+                margin-top: 20px
+                width: 50vw
+                overflow: scroll
+                min-height: 30vh
+                max-heihgt: 70vh                
+                resize: none
+                outline: none
+                border: 1px solid gray
+                padding: 10px
+                border-radius: 15px
+            pre
+                font-family: 'Lato', sans-serif
+            div
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+            .preview
+                margin-top: 20px
+                width: 50vw
+                min-height: 30vh
+                max-heihgt: 70vh
+                overflow: scroll
+                border: 1px solid gray
+                padding: 10px
+                border-radius: 15px
+                font-size: 12px
+                display: inline
+                text-align: left
+            button
+                margin-top: 10px

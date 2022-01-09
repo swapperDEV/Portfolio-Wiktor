@@ -100,6 +100,9 @@
           transform: translateX(-50%, 0%);
   -webkit-animation: fadeing 1s ease infinite;
           animation: fadeing 1s ease infinite;
+  cursor: pointer;
+  font-size: 55px;
+  font-weight: 200;
 }
 
 @-webkit-keyframes fadeing {

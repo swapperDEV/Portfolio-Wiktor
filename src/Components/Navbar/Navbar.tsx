@@ -10,14 +10,22 @@ const Navbar = (props:any) => {
     const [navActScrollElement, changeActScrollElement] = useState('home')
     const handleScroll = () => {
         const position = window.pageYOffset;
-        //console.log(height, position);
+        let height = window.innerHeight / 3.5
         if(position > 1) {
             changeClasses('topNav mostBlack')
         } else {
             changeClasses('topNav')
         }
         setScrollPosition(position);
-        if(position > props.projects.current.offsetTop - 10) {
+        if(position > props.contact.current.offsetTop - height) {
+            changeActScrollElement('contact')
+        }else if(position > props.blog.current.offsetTop - 100) {
+            changeActScrollElement('blog')
+        }
+        else if(position > props.opinions.current.offsetTop - height - 100) {
+            changeActScrollElement('opinions')
+        }
+        else if(position > props.projects.current.offsetTop - height) {
             changeActScrollElement('projects')
         } else if(position > props.about.current.offsetTop - 10) {
             changeActScrollElement('about')
@@ -46,6 +54,18 @@ const Navbar = (props:any) => {
                 props.projectsScroll()
                 changeNavDisplay(false)
                 break;  
+            case 'blog':
+                props.blogScroll()
+                changeNavDisplay(false)
+                break;  
+            case 'opinions':
+                props.opinionsScroll()
+                changeNavDisplay(false)
+                break;  
+            case 'contact':
+                props.contactScroll()
+                changeNavDisplay(false)
+                break;  
         }
     }
     const sections = [
@@ -63,21 +83,21 @@ const Navbar = (props:any) => {
         icons: <i className={`fas fa-bookmark`}></i>,
         onClk: () => scrollToA('projects'),
         class: navActScrollElement === 'projects' && 'ActiveS'
-        },        
-        {name: 'BLOG',
-        icons: <i className="fas fa-tasks"></i>,
-        onClk: () => scrollToA('about'),
-        class: ''
-        },        
+        },          
         {name: 'OPINIONS',
         icons: <i className="fas fa-users"></i>,
-        onClk: () => scrollToA('about'),
-        class: ''
-        },        
+        onClk: () => scrollToA('opinions'),
+        class: navActScrollElement === 'opinions' && 'ActiveS'
+        },           
+        {name: 'BLOG',
+        icons: <i className="fas fa-tasks"></i>,
+        onClk: () => scrollToA('blog'),
+        class: navActScrollElement === 'blog' && 'ActiveS'
+        },           
         {name: 'CONTACT',
         icons: <i className="fas fa-phone"></i>,
-        onClk: () => scrollToA('about'),
-        class: ''
+        onClk: () => scrollToA('contact'),
+        class: navActScrollElement === 'contact' && 'ActiveS'
         },
         ]
     const links = sections.map((e) => (

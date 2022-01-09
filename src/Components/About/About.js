@@ -10,12 +10,12 @@ const About = forwardRef((props, ref) => {
         Aos.init({ duration: 1000 })
     },[])
     return (
-    <div ref={ref}>
+    <div ref={ref} className='fill_white'>
         <SectionLine/>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
         <path fill="#4a4e69" fill-opacity="1" d="M0,32L60,37.3C120,43,240,53,360,80C480,107,600,149,720,165.3C840,181,960,171,1080,138.7C1200,107,1320,53,1380,26.7L1440,0L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
         </svg>
-        <div className='about_section' >
+        <section className='about_section' >
             <div className='about__left' data-aos='fade-right'>
                 <div className='about__left_top'>
                     <div className='about__left_info'>                
@@ -42,7 +42,7 @@ const About = forwardRef((props, ref) => {
             <div className='about__right' data-aos='fade-left'>
                 <img src={memoji} alt='myphoto'/>
             </div>
-        </div>
+        </section>
     </div>
     )
 })
