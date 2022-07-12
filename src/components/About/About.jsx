@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect } from "react";
-import "./styles/about.css";
 import memoji from "../../assets/images/memoji.jpg";
+import "./styles/about.css";
 import { AboutHeadline } from "./AboutHeadline";
 export const About = forwardRef((props, ref) => {
   return (
