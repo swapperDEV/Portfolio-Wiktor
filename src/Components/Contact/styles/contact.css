@@ -1,80 +1,53 @@
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   min-height: 50vh;
 }
-
 .contact .contact_info, .contact .contact_form {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-basis: 50%;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-top: 50px;
   margin-bottom: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .contact .contact_info p, .contact .contact_form p {
   margin: 0px;
 }
-
 .contact .contact_info .paragraph .info {
   margin: 0px;
-  font: 700 35px/40px Montserrat,sans-serif;
+  font: 700 35px/40px Montserrat, sans-serif;
   color: #040c2c;
   text-transform: capitalize;
   padding-bottom: 24px;
   opacity: 1;
 }
-
 .contact .contact_info .paragraph p {
   color: #797979;
-  font: 400 16px/28px Montserrat,sans-serif;
+  font: 400 16px/28px Montserrat, sans-serif;
   padding-bottom: 5px;
-  opacity: .8;
+  opacity: 0.8;
 }
-
 .contact .contact_info .paragraph i {
   margin-right: 5px;
 }
-
 .contact .contact_form .info {
   margin: 0px;
-  font: 700 35px/40px Montserrat,sans-serif;
+  font: 700 35px/40px Montserrat, sans-serif;
   color: #040c2c;
   text-transform: capitalize;
   padding-bottom: 24px;
 }
-
 .contact .contact_form div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 50%;
   margin-bottom: 10px;
 }
-
 .contact .contact_form div .email {
   margin-left: 10px;
 }
-
 .contact .contact_form div input {
   padding: 5px;
   background-color: white;
@@ -82,18 +55,15 @@
   border-radius: 5px;
   width: 100%;
 }
-
 .contact .contact_form button {
   padding: 5px;
   background-color: white;
   border: 1px solid lightgray;
   border-radius: 5px;
   width: 100px;
-  -webkit-transition: 0.1s ease;
   transition: 0.1s ease;
   color: #040c2c;
 }
-
 .contact .contact_form button:hover {
   cursor: pointer;
   background-color: #040c2c;
@@ -102,13 +72,9 @@
 
 @media (max-width: 900px) {
   .contact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .contact_form {
     width: 100%;
   }
-}
-/*# sourceMappingURL=contact.css.map */
+}/*# sourceMappingURL=contact.css.map */

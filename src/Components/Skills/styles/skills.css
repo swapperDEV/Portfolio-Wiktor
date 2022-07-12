@@ -2,7 +2,6 @@
   background-color: #fafafa;
   padding: 100px;
 }
-
 .skills_section .skills_section_title {
   text-align: center;
   font-size: 50px;
@@ -10,75 +9,51 @@
   padding: 0px;
   margin: 0px;
 }
-
 .skills_section .skills_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
 .skills_section .skills_list .skill {
   color: #8a8a8a;
   margin: 30px;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  flex-basis: 25%;
   background-color: #fff;
   border: 1px solid #f3f1f1;
   border-radius: 20px;
   padding: 10px;
   min-height: 20%;
 }
-
 .skills_section .skills_list .skill .skill__name {
   font-size: 70px;
   padding: 0px;
 }
-
 .skills_section .skills_list .skill .skill__name p {
   margin: 0px;
   margin-bottom: 20px;
 }
-
 .skills_section .skills_list .skill .count {
   margin-top: 0px;
   padding-top: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 23px;
 }
-
 .skills_section .skills_list .skill .count .count__project {
   margin: 0px;
   padding: 0px;
   color: #040c2c;
 }
-
 .skills_section .skills_list .skill .count .count__years {
   color: #4a4e69;
   margin: 0px;
   padding: 0px;
   margin-left: 10px;
 }
-
 .skills_section .skills_list .skill .count__blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .skills_section .skills_list .skill .count__blocks .block {
   width: 17px;
   height: 40px;
@@ -86,12 +61,9 @@
   margin: 5px;
   border-radius: 10px;
 }
-
 .skills_section .skills_list .skill .count__blocks .projects {
   background-color: #040c2c;
 }
-
 .skills_section .skills_list .skill .count__blocks .years {
   background-color: #4a4e69;
-}
-/*# sourceMappingURL=skills.css.map */
+}/*# sourceMappingURL=skills.css.map */
