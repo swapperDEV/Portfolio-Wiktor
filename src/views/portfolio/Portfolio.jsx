@@ -22,18 +22,14 @@ export const Portfolio = () => {
   const blog = useRef();
   const contact = useRef();
   const opinions = useRef();
-  //@ts-ignore
   const aboutScroll = () => {
-    //@ts-ignore
     about.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const homeScroll = () => {
-    //@ts-ignore
     home.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const projectsScroll = () => {
     changeCanScrolled(false);
-    //@ts-ignore
     projects.current.scrollIntoView({ behavior: "smooth", block: "start" });
     setTimeout(() => {
       changeCanScrolled(true);
@@ -41,7 +37,6 @@ export const Portfolio = () => {
   };
   const blogScroll = () => {
     changeCanScrolled(false);
-    //@ts-ignore
     blog.current.scrollIntoView({ behavior: "smooth", block: "start" });
     setTimeout(() => {
       changeCanScrolled(true);
@@ -49,7 +44,6 @@ export const Portfolio = () => {
   };
   const opinionsScroll = () => {
     changeCanScrolled(false);
-    //@ts-ignore
     opinions.current.scrollIntoView({ behavior: "smooth", block: "start" });
     setTimeout(() => {
       changeCanScrolled(true);
@@ -57,7 +51,6 @@ export const Portfolio = () => {
   };
   const contactScroll = () => {
     changeCanScrolled(false);
-    //@ts-ignore
     contact.current.scrollIntoView({ behavior: "smooth", block: "start" });
     setTimeout(() => {
       changeCanScrolled(true);
